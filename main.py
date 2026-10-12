@@ -59,6 +59,7 @@ with ser as ser_port:
                         # canvas.fill(0, 0, 0)
                         draw.rectangle([0, 0, 31, 31], fill=(0, 0, 0))
 
+                draw.rectangle([32, 0, 64, 31], fill=(0, 0, 0))
                 draw.text((text_x, text_y), gear, fill=(255, 255, 255), font=text_font)
                 canvas.SetImage(image)
                 canvas = matrix.SwapOnVSync(canvas)
