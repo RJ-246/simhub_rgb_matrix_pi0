@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # Setup the serial port to receive data
 baudrate = 115200
-port = ""
+port = "/dev/ttyGS0"
 ser = serial.Serial(port, baudrate, timeout=1)
 
 # Setup the RGB matrix
@@ -15,7 +15,6 @@ options.cols = 64
 options.chain_length = 1
 options.parallel = 1
 options.hardware_mapping = "adafruit-hat-pwm"
-options.gpio_slowdown = 0
 options.pwm_bits = 7
 
 matrix = RGBMatrix(options=options)
